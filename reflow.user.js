@@ -6,47 +6,78 @@
 // @author      http://iamdanielmarino.com
 // ==/UserScript==
 
-(function () {
+$(document).ready(function(){
 
     $('html').addClass('reflow');
-    $('head').append('<link rel="stylesheet" href="reflow.user.css">');
-
+    $('head').append('<link rel="stylesheet" href="//dl.dropbox.com/u/138203/reflow/reflow.user.css">');
     $('body').prepend('<header></header>');
 
-    $('#flow_list').appendTo($('#app_menu'));
-    //$('#userlist_button').appendTo($('#app_menu'));
+    $('#app_menu').append('<section id="my_flows"><h4>Flows</h4></section>')
+    $('#app_menu').append('<section id="flow_filter"><h4>Filters</h4><ol></ol></section>');
 
-    $('.user_icon').removeClass('ui-corner-all');
+    var interval;
 
-    $('#app_menu').append('<section id="flow_filter"><h4>Filters</h4><ol></ol></section>')
-    $('.influx-types a').each(function () {
-       $(this).appendTo($('#flow_filter ol'))
-    });
-    $('#flow_filter a')
-        .wrap('<li>')
-        .removeClass('app-button app-button-bevel ui-corner-left ui-state-default')
-        .find('span')
-            .remove();
+    function moveTheDOM() {
 
-    $('#flow_filter a').click(function() {
-        $('#flow_filter a').removeClass('ui-state-active');
-        $(this).addClass('ui-state-active');
-    });
+        var nav           = $("#navigation"),
+            userList      = $('.influx-types a'),
+            flowList,
 
-    $('#flowdock-influx .app-buttonset-right').attr('id', 'actions').appendTo($('#app_menu'));
-    $('#actions a').removeClass('ui-corner-all ui-state-default app-button app-button-icon app-button-bevel app-button-toggleable app-button-icon-solo');
-    $('#actions span').remove();
-    $('#flowdock-influx .app-toolbar').remove();
+            flowListMoved = false,
+            userListMoved = false;
 
-    $('#main_splitter').prepend('<section id="people"></section>');
-    $('#userlist_button').appendTo($('#people'));
+        // Move the flow list
+        if (!flowListMoved) {
+            nav.click();
+            flowList = $("#flow_list");
+            if (flowList.length === 1) {
+                flowList.appendTo($('#my_flows'));
+                nav.click();
+                flowListMoved = true;
+            }
+        }
 
-    $('.user_icon').each(function() {
-        $(this).text($(this).attr('title'));
-    });
+        // Move the user list
+        if (!userListMoved && userList.length > 1) {
+            userList.each(function () {
+                $(this).appendTo($('#flow_filter ol'))
+            });
+            $('#flow_filter a')
+                .wrap('<li>')
+                .removeClass('app-button app-button-bevel ui-corner-left ui-state-default')
+                .find('span')
+                    .remove();
+            userListMoved = true;
+        }
 
-    $('.app-toolbar').remove();
+        if (userListMoved && flowListMoved) {
+            clearInterval(interval);
+        }
+
+    }
+
+    interval = window.setInterval(moveTheDOM, 1000);
+
+    // $('.user_icon').removeClass('ui-corner-all');
 
 
+    // $('#flow_filter a').click(function() {
+    //      $('#flow_filter a').removeClass('ui-state-active');
+    //      $(this).addClass('ui-state-active');
+    // });
 
-})();
+    // $('#flowdock-influx .app-buttonset-right').attr('id', 'actions').appendTo($('#app_menu'));
+    // $('#actions a').removeClass('ui-corner-all ui-state-default app-button app-button-icon app-button-bevel app-button-toggleable app-button-icon-solo');
+    // $('#actions span').remove();
+    // $('#flowdock-influx .app-toolbar').remove();
+
+    // $('#main_splitter').prepend('<section id="people"></section>');
+    // $('#userlist_button').appendTo($('#people'));
+
+    // $('.user_icon').each(function() {
+    //     $(this).text($(this).attr('title'));
+    // });
+
+    // $('.app-toolbar').remove();
+
+});

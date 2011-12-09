@@ -124,7 +124,7 @@ width: 100%;
 }
 
 .reflow #flow_list .flow_name {
-  background: url(../img/chat.png) 0 50% no-repeat;
+  background: url(http://dl.dropbox.com/u/138203/reflow/img/chat.png) 0 50% no-repeat;
   padding-left: 21px;
 }
 
@@ -155,11 +155,11 @@ width: 100%;
 }
 
 .reflow #actions [title="Settings"] {
-  background: url(../img/settings.png) no-repeat;
+  background: url(http://dl.dropbox.com/u/138203/reflow/img/settings.png) no-repeat;
 }
 
 .reflow #actions [title="Help"] {
-  background: url(../img/help.png) no-repeat;
+  background: url(http://dl.dropbox.com/u/138203/reflow/img/help.png) no-repeat;
   display: inline-block;
   height: 16px;
   overflow: hidden;

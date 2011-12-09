@@ -1,0 +1,131 @@
+/* Reflow User Styles */
+
+.reflow body {
+  background: #fff !important;
+  color: #1a1a1a !important;
+}
+
+.reflow header {
+  background-color: #e8e8e8;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e8e8e8), to(#c0c0c0));
+  background-image: -webkit-linear-gradient(top, #e8e8e8, #c0c0c0);
+  background-image: -moz-linear-gradient(top, #e8e8e8, #c0c0c0);
+  background-image: -o-linear-gradient(top, #e8e8e8, #c0c0c0);
+  background-image: -ms-linear-gradient(top, #e8e8e8, #c0c0c0);
+  background-image: linear-gradient(top, #e8e8e8, #c0c0c0);
+  border-bottom: 1px solid #989898;
+  height: 50px;
+}
+
+.reflow #app_menu {
+  background: #e0e5eb;
+  border-top: 1px solid #f9f9f9;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  float: left;
+  min-height: 100%;
+  padding: 10px;
+  position: static;
+  text-align: left;
+  width: 15%;
+  z-index: 1;
+}
+
+.reflow #app_menu div.app_icon.current {
+  background: none !important;
+}
+
+.reflow #main_splitter {
+  border-left: 1px solid #b4b4b4;
+  border-top: 1px solid #f9f9f9;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: right;
+  margin: 0;
+  min-width: auto;
+  width: 85%;
+}
+
+.reflow #app {
+  background: none !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  position: static !important;
+  width: 50% !important;
+  z-index: 1;
+}
+
+.reflow #chat {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: right;
+  position: static !important;
+  width: 50% !important;
+}
+
+.reflow .vsplitbar {
+  display: none !important;
+}
+
+.reflow #userlist_button .user_icon {
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+}
+
+/* App Menu */
+
+.reflow #app_menu h4 {
+  color: #727577;
+  line-height: 1;
+  margin: 20px 0 10px;
+  text-transform: uppercase;
+}
+
+.reflow #app_menu ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.reflow #app_menu li {
+  margin: 0;
+  padding: 0 0 5px;
+}
+
+.reflow #app_menu a {
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.reflow #flow_list .organization {
+  display: none;
+}
+
+/* The Flow */
+
+.reflow #flowdock-influx .influx_item_wrapper,
+.reflow #flowdock-flowser .influx_item_wrapper,
+.reflow #flowdock-chat .influx_item_wrapper {
+  padding-left: 0 !important;
+}
+
+/* Temp */
+
+#app_list {
+  display: none;
+}
+

@@ -34,6 +34,8 @@
     });
 
     $('#flowdock-influx .app-buttonset-right').attr('id', 'actions').appendTo($('#app_menu'));
+    $('#actions a').removeClass('ui-corner-all ui-state-default app-button app-button-icon app-button-bevel app-button-toggleable app-button-icon-solo');
+    $('#actions span').remove();
     $('#flowdock-influx .app-toolbar').remove();
 
     $('#main_splitter').prepend('<section id="people"></section>');

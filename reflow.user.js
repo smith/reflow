@@ -28,4 +28,23 @@
         .find('span')
             .remove();
 
+    $('#flow_filter a').click(function() {
+        $('#flow_filter a').removeClass('ui-state-active');
+        $(this).addClass('ui-state-active');
+    });
+
+    $('#flowdock-influx .app-buttonset-right').attr('id', 'actions').appendTo($('#app_menu'));
+    $('#flowdock-influx .app-toolbar').remove();
+
+    $('#main_splitter').prepend('<section id="people"></section>');
+    $('#userlist_button').appendTo($('#people'));
+
+    $('.user_icon').each(function() {
+        $(this).text($(this).attr('title'));
+    });
+
+    $('.app-toolbar').remove();
+
+
+
 })();

@@ -19,11 +19,12 @@ $(document).ready(function(){
 
     function moveTheDOM() {
 
-        var nav           = $("#navigation"),
+        var navClick      = $("#navigation"),
             filtersList   = $('.influx-types a'),
             actions       = $('#flowdock-influx .app-buttonset-right'),
-            usersList     = $('#userlist_button'),
+            usersClick    = $('#userlist_button'),
             flowList,
+            usersList,
 
             flowListMoved  = false,
             filtersMoved   = false,
@@ -32,11 +33,12 @@ $(document).ready(function(){
 
         // Move the flow list
         if (!flowListMoved) {
-            nav.click();
+            navClick.click();
             flowList = $("#flow_list");
             if (flowList.length === 1) {
                 flowList.appendTo($('#my_flows'));
-                nav.click();
+                $('.common-flow-items').appendTo('header');
+                navClick.click();
                 flowListMoved = true;
             }
         }
@@ -64,14 +66,32 @@ $(document).ready(function(){
         }
 
         // Move the users
-        if (!usersListMoved && usersList.length === 1) {
-           $('#main_splitter').prepend('<section id="people"></section>');
-            usersList.appendTo($('#people'));
-            $('.user_icon').each(function() {
-                $(this).text($(this).attr('id'));
-            });
-            $('.app-toolbar').remove();
-            usersListMoved = true;
+        if (!usersListMoved) {
+            usersClick.click();
+            usersList = $("#dashboard_user_list");
+            if (usersList.length === 1) {
+
+                $('#main_splitter').prepend('<section id="people"></section>');
+
+                // Append me
+                $('header').append('<div class="user"><div class="me" style="' + $('#status-panel .avatar').attr('style') + '"></div><div class="user_name">' + $('.user_info').find('.name').text() + '</div></div>');
+
+                // Append everyone else
+                $('#dashboard_user_list .user').each(function() {
+                    $('#people').append('<div class="' + $(this).attr('class') + '"><div class="user_name">' + $(this).find('.user_name').text() + '</div><div class="last_activity">' + $(this).find('.last_activity').text() + '</div></div>');
+                });
+
+                // Append people manager
+                $('.people-manager')
+                    .removeClass('app-button ui-corner-all ui-state-default ui-state-hover')
+                    .find('.ui-icon')
+                    .remove()
+                $('#people').append($('.people-manager'));
+
+                usersClick.click();
+                $('.app-toolbar').remove();
+                usersListMoved = true;
+            }
         }
 
         if (filtersMoved && flowListMoved && settingsMoved && usersListMoved) {

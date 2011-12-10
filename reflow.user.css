@@ -79,6 +79,78 @@
   display: none !important;
 }
 
+/* Header */
+
+.reflow header .user {
+  float: left;
+  margin: 10px 0 0 10px;
+}
+
+.reflow header .user .me {
+  border: 1px solid #fff;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .25);
+  display: inline-block;
+  height: 30px;
+  margin-right: 5px;
+  width: 30px;
+}
+
+.reflow header .user .user_name {
+  display: inline-block;
+  position: relative;
+  top: -9px;
+}
+
+.reflow .common-flow-items {
+  display: inline-block;
+  float: right;
+  margin-right: 10px;
+}
+
+.reflow .common-flow-items li {
+  display: inline;
+  float: left;
+  margin: 0 1px;
+}
+
+.reflow .common-flow-items a,
+.reflow .common-flow-items input {
+  background-color: #f3f3f3;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f3f3f3), to(#dfdfdf));
+  background-image: -webkit-linear-gradient(top, #f3f3f3, #dfdfdf);
+  background-image: -moz-linear-gradient(top, #f3f3f3, #dfdfdf);
+  background-image: -o-linear-gradient(top, #f3f3f3, #dfdfdf);
+  background-image: -ms-linear-gradient(top, #f3f3f3, #dfdfdf);
+  background-image: linear-gradient(top, #f3f3f3, #dfdfdf);
+  border: 1px solid #ccc;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #444;
+  cursor: pointer;
+  font-size: 11px;
+  padding: 3px 7px 4px;
+  position: relative;
+  text-decoration: none;
+  top: 5px;
+}
+
+.reflow .common-flow-items li input {
+  top: 0;
+}
+
+.reflow .common-flow-items li:first-child {
+  display: none;
+}
+
+.reflow .common-flow-items li:last-child {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 /* App Menu */
 
 .reflow #app_menu h4 {
@@ -191,11 +263,12 @@ width: 100%;
   padding: 10px;
 }
 
-.reflow #userlist_button {
-  display: block;
+.reflow #people .user {
+  cursor: default;
+  display: inline-block;
 }
 
-.reflow #people .user_icon {
+.reflow #people .user .user_name {
   background-color: #dae6f9 !important;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#dae6f9), to(#c1d4f5)) !important;
   background-image: -webkit-linear-gradient(top, #dae6f9, #c1d4f5) !important;
@@ -215,7 +288,7 @@ width: 100%;
   padding: 0 10px;
 }
 
-.reflow #people .user_icon.idle {
+.reflow #people .user.idle .user_name {
   background-color: #efd57e !important;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#efd57e), to(#ffc100)) !important;
   background-image: -webkit-linear-gradient(top, #efd57e, #ffc100) !important;
@@ -227,11 +300,12 @@ width: 100%;
   opacity: .5;
 }
 
-.reflow #people .user_icon.offline {
+.reflow #people .user.offline {
   opacity: .25;
 }
 
-.reflow #people .user_icon:empty {
+/* Hide this for now... */
+.reflow #people .user .last_activity {
   display: none;
 }
 

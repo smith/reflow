@@ -1,7 +1,7 @@
 /* Reflow User Styles */
 
 .reflow body {
-  background: #fff !important;
+  background: #e0e5eb !important;
   color: #1a1a1a !important;
 }
 
@@ -148,23 +148,36 @@ width: 100%;
 .reflow #actions a {
   display: inline-block;
   height: 16px;
-  margin-right: 5px;
+  margin: 0 5px 0 0 !important;
+  opacity: .5;
   overflow: hidden;
   text-indent: -5000px;
-  width: 16px;
+  -webkit-transition: opacity .2s linear;
+  -moz-transition: opacity .2s linear;
+  transition: opacity .2s linear;
+  width: 16px !important;
+}
+
+.reflow #actions a:hover {
+  opacity: .85;
 }
 
 .reflow #actions [title="Settings"] {
-  background: url(http://dl.dropbox.com/u/138203/reflow/img/settings.png) no-repeat;
+  background: url(http://dl.dropbox.com/u/138203/reflow/img/settings.png) no-repeat !important;
 }
 
 .reflow #actions [title="Help"] {
-  background: url(http://dl.dropbox.com/u/138203/reflow/img/help.png) no-repeat;
+  background: url(http://dl.dropbox.com/u/138203/reflow/img/help.png) no-repeat !important;
   display: inline-block;
   height: 16px;
   overflow: hidden;
   text-indent: -5000px;
   width: 16px;
+}
+
+.reflow #actions .ui-state-active {
+  border: 0 !important;
+  padding: 0 !important;
 }
 
 /* People */
@@ -196,9 +209,26 @@ width: 100%;
   border-radius: 20px;
   -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5) inset;
   display: inline-block;
+  font-size: 11px;
   line-height: 20px;
-  margin: 5px;
+  margin: 3px;
   padding: 0 10px;
+}
+
+.reflow #people .user_icon.idle {
+  background-color: #efd57e !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#efd57e), to(#ffc100)) !important;
+  background-image: -webkit-linear-gradient(top, #efd57e, #ffc100) !important;
+  background-image: -moz-linear-gradient(top, #efd57e, #ffc100) !important;
+  background-image: -o-linear-gradient(top, #efd57e, #ffc100) !important;
+  background-image: -ms-linear-gradient(top, #efd57e, #ffc100) !important;
+  background-image: linear-gradient(top, #efd57e, #ffc100) !important;
+  border: 1px solid #daa400;
+  opacity: .5;
+}
+
+.reflow #people .user_icon.offline {
+  opacity: .25;
 }
 
 .reflow #people .user_icon:empty {
@@ -213,11 +243,31 @@ width: 100%;
   padding-left: 0 !important;
 }
 
+.reflow #flowdock-influx .influx_item .content .title,
+.reflow #flowdock-influx .item .content .title,
+.reflow #flowdock-influx .results-line .content .title,
+.reflow #flowdock-flowser .influx_item .content .title,
+.reflow #flowdock-flowser .item .content .title,
+.reflow #flowdock-flowser .results-line .content .title,
+.reflow #flowdock-chat .influx_item .content .title,
+.reflow #flowdock-chat .item .content .title,
+.reflow #flowdock-chat .results-line .content .title {
+  font-size: 100%;
+}
+
 /* The Chat */
 
 .reflow #flowdock-chat #chat_app_input_area {
-  bottom: 10px;
-  position: relative;
+  bottom: -1px;
+  right: 0;
+  position: absolute;
+  width: 50%;
+}
+
+/* Misc */
+
+.reflow .ui-state-hover {
+  border: 0 !important;
 }
 
 /* Temp */

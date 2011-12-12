@@ -52,7 +52,7 @@
 }
 
 .reflow #app {
-  background: none !important;
+  background: #efefef;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -203,6 +203,45 @@ display: inline-block;
 margin: 0 -10px;
 padding: 2px 10px 0 11px;
 width: 100%;
+}
+
+#app_menu div.app_icon {
+  padding: 1px 0 0 21px;
+}
+
+.reflow #app_menu .app_icon .app_icon_tooltip {
+  position: static;
+  background: none;
+  color: inherit;
+  font-weight: normal;
+  text-shadow: none;
+  padding: 0;
+  line-height: inherit;
+  height: auto;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  display: inline-block;
+}
+
+.reflow #influx_icon,
+.reflow #app_menu div#influx_icon.app_icon.current {
+  background: url(http://dl.dropbox.com/u/138203/reflow/img/inbox.png) 0 50% no-repeat !important;
+}
+
+.reflow #flowser_icon,
+.reflow #app_menu div#flowser_icon.app_icon.current {
+  background: url(http://dl.dropbox.com/u/138203/reflow/img/search.png) 0 50% no-repeat !important;
+}
+
+.reflow #settings_icon,
+.reflow #app_menu div#settings_icon.app_icon.current {
+  background: url(http://dl.dropbox.com/u/138203/reflow/img/settings.png) 0 50% no-repeat !important;
+}
+
+.reflow #app_menu div.app_icon img,
+.reflow #app_menu div.app_unread {
+  display: none !important;
 }
 
 .reflow #flow_list .flow_name {
@@ -370,8 +409,8 @@ width: 100%;
 /*#app_list {
   display: none;
 }
-
+*/
 .feedback {
   display: none;
-}*/
+}
 

@@ -21,6 +21,7 @@ $(document).ready(function(){
 
         var navClick      = $("#navigation"),
             filtersList   = $('.influx-types a'),
+            viewsList     = $('#app_menu'),
             actions       = $('#flowdock-influx .app-buttonset-right'),
             usersClick    = $('#userlist_button'),
             flowList,
@@ -28,6 +29,7 @@ $(document).ready(function(){
 
             flowListMoved  = false,
             filtersMoved   = false,
+            viewsMoved     = false,
             settingsMoved  = false,
             usersListMoved = false;
 
@@ -54,6 +56,16 @@ $(document).ready(function(){
                 .find('span')
                     .remove();
             filtersMoved = true;
+        }
+
+        // Move the flow viewing options
+        if (!viewsMoved && viewsList.length ===1) {
+            viewsList.prepend('<section id="flow_views"><h4>Views</h4><ol></ol></section>');
+            $('.app_icon').each(function() {
+                $(this).appendTo($('#flow_views ol'));
+                $(this).wrap('<li>')
+            });
+            viewsMoved = true;
         }
 
         // Move the settings & help icon
@@ -93,13 +105,13 @@ $(document).ready(function(){
             }
         }
 
-        if (filtersMoved && flowListMoved && settingsMoved && usersListMoved) {
+        if (filtersMoved && flowListMoved && viewsMoved && settingsMoved && usersListMoved) {
             clearInterval(interval);
         }
 
     }
 
-    interval = window.setInterval(moveTheDOM, 1000);
+    interval = window.setInterval(moveTheDOM, 2000);
 
     // Annoying but dealing with flow heights
     $(window).resize(function() {
@@ -107,7 +119,9 @@ $(document).ready(function(){
             contents = $('.app-contents'),
             chat     = $('#chat_app_lines');
         contents.height(contents.height() - pSize);
-        chat.height(chat.height() - pSize); // Doesn't always fire correctly...
+        //chat.height(chat.height() - (pSize+70)); // Doesn't always fire correctly...
+        console.log(chat.html())
+        //chat.css("height", chat.height() + "px !important")
     })
 
 });

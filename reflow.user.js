@@ -89,7 +89,6 @@ $(document).ready(function(){
                 $('#people').append($('.people-manager'));
 
                 usersClick.click();
-                $('.app-toolbar').remove();
                 usersListMoved = true;
             }
         }

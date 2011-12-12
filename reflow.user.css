@@ -132,10 +132,19 @@
   color: #444;
   cursor: pointer;
   font-size: 11px;
+  opacity: .6;
   padding: 3px 7px 4px;
   position: relative;
   text-decoration: none;
   top: 5px;
+  -webkit-transition: opacity .2s linear;
+  -moz-transition: opacity .2s linear;
+  transition: opacity .2s linear;
+}
+
+.reflow .common-flow-items a:hover,
+.reflow .common-flow-items input:hover {
+  opacity: 1;
 }
 
 .reflow .common-flow-items li input {
@@ -178,7 +187,8 @@
   text-decoration: none;
 }
 
-.reflow #app_menu a.ui-state-active {
+.reflow #app_menu a.ui-state-active,
+.reflow #app_menu a.ui-state-active.ui-state-hover {
 background-color: #b9c4d8;
 background-image: -webkit-gradient(linear, left top, left bottom, from(#b9c4d8), to(#9aa9c8));
 background-image: -webkit-linear-gradient(top, #b9c4d8, #9aa9c8);
@@ -304,12 +314,21 @@ width: 100%;
   opacity: .25;
 }
 
+.reflow #people .people-manager {
+  display: inline-block;
+  margin-left: 5px;
+}
+
 /* Hide this for now... */
 .reflow #people .user .last_activity {
   display: none;
 }
 
 /* The Flow */
+
+.reflow .app-toolbar {
+  display: none !important;
+}
 
 .reflow #flowdock-influx .influx_item_wrapper,
 .reflow #flowdock-flowser .influx_item_wrapper,
@@ -329,6 +348,8 @@ width: 100%;
   font-size: 100%;
 }
 
+
+
 /* The Chat */
 
 .reflow #flowdock-chat #chat_app_input_area {
@@ -346,11 +367,11 @@ width: 100%;
 
 /* Temp */
 
-#app_list {
+/*#app_list {
   display: none;
 }
 
 .feedback {
   display: none;
-}
+}*/
 

@@ -2,4 +2,33 @@ h1. Reflow
 
 This is a user script/style installation for "Flowdock":http://www.flowdock.com/.
 
-In progress...
+Flowdock is a great tool that we use at "Cramer Dev":http://cramerdev.com to help communicate with each other as well as be able to keep an eye on important feeds, code commits, emails, and more. It runs on the desktop inside of a "Fluid":http://fluidapp.com/ instance. I'm very comfortable using Skype (since I work with a distributed team), and and thought it would be perfect if I could integrate a Flowdock-like workflow (sorry for all the "flow" lingo) into it. Since that wasn't ever going to happen, I decided to tweak Flowdock to look and function (somewhat) more like Skype.
+
+h3. Important Note
+
+Right now the JavaScript file is pointing to my Dropbox for hosting the CSS file. Please don't hotlink to my Dropbox - host it somewhere else. I am planning on removing this soon, and haven't gotten around to finding a CDN to host this on yet.
+
+h3. Some Issues
+
+* The "Personal settings" link is currently not available - there's some weird AJAXy stuff I need to get ironed out for that
+* Flowdock resizes the "flow" and "chat" windows every few seconds using JavaScript and the way the HTML is laid out - I haven't figured out a way to override this using CSS. Therefore I'm overriding the Flowdock script by firing my own script every few seconds (on window resize to be exact - even though it doesn't really resize, but whatev). Unfortunately this can create a weird visual bug every couple of seconds when typing into the chat textarea - however it seems harmless for now
+* I haven't fully ironed out toggling the active states for "Views" and "Flows" in the side menu.
+* Just a note that I'm hiding the "Feedback" tab in the last line of CSS. You can comment it out or delete it
+
+h3. Upcoming Enhancements
+
+* Show how long a user has been ide when hovering over their name
+* Better styles for the actual "flow" and "chat" windows
+* Change military time to non-military time (in the chat area)
+
+h3. Feedback
+
+Please create an "issue":https://github.com/starzonmyarmz/reflow/issues if you find any bugs or have any feature enhancements. Or better yet - fork this and send a pull request so that I don't have to do all the work myself!
+
+h4. License
+
+GPL license:
+http://www.gnu.org/licenses/gpl.html
+
+MIT license:
+http://www.opensource.org/licenses/mit-license.php

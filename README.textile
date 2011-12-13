@@ -8,7 +8,8 @@ h3. Installation
 
 # Download (or git clone for easier updating) the git repo to @/username/Library/Application Support/Fluid/SSB/Flowdock/Userscripts@ (You only need the JS file - the CSS file is in the repo for development reasons).
 # Quit and restart Flowdock.
-# In the scripts menu: !http://dl.dropbox.com/u/138203/Screenshots/dy.png! check off "reflow".
+# In the scripts menu check off "reflow":
+!http://dl.dropbox.com/u/138203/Screenshots/dy.png! 
 # Quit and restart Flowdock again.
 # Your flow should then load with that userscript... if it doesn't try doing a manual refresh of the page.
 

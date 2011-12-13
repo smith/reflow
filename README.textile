@@ -4,9 +4,13 @@ This is a user script/style installation for "Flowdock":http://www.flowdock.com/
 
 Flowdock is a great tool that we use at "Cramer Dev":http://cramerdev.com to help communicate with each other as well as be able to keep an eye on important feeds, code commits, emails, and more. It runs on the desktop inside of a "Fluid":http://fluidapp.com/ instance. I'm very comfortable using Skype (since I work with a distributed team), and and thought it would be perfect if I could integrate a Flowdock-like workflow (sorry for all the "flow" lingo) into it. Since that wasn't ever going to happen, I decided to tweak Flowdock to look and function (somewhat) more like Skype.
 
-h3. Important Note
+h3. Installation
 
-Right now the JavaScript file is pointing to my Dropbox for hosting the CSS file. Please don't hotlink to my Dropbox - host it somewhere else. I am planning on removing this soon, and haven't gotten around to finding a CDN to host this on yet.
+# Download (or git clone for easier updating) the git repo to @/username/Library/Application Support/Fluid/SSB/Flowdock/Userscripts@ (You only need the JS file - the CSS file is in the repo for development reasons).
+# Quit and restart Flowdock.
+# In the scripts menu: !http://dl.dropbox.com/u/138203/Screenshots/dy.png! check off "reflow".
+# Quit and restart Flowdock again.
+# Your flow should then load with that userscript... if it doesn't try doing a manual refresh of the page.
 
 h3. Some Issues
 

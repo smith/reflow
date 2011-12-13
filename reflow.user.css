@@ -187,22 +187,27 @@
   text-decoration: none;
 }
 
-.reflow #app_menu a.ui-state-active,
-.reflow #app_menu a.ui-state-active.ui-state-hover {
-background-color: #b9c4d8;
-background-image: -webkit-gradient(linear, left top, left bottom, from(#b9c4d8), to(#9aa9c8));
-background-image: -webkit-linear-gradient(top, #b9c4d8, #9aa9c8);
-background-image: -moz-linear-gradient(top, #b9c4d8, #9aa9c8);
-background-image: -o-linear-gradient(top, #b9c4d8, #9aa9c8);
-background-image: -ms-linear-gradient(top, #b9c4d8, #9aa9c8);
-background-image: linear-gradient(top, #b9c4d8, #9aa9c8);
-border: 0;
-border-bottom: 1px solid #919fbc;
-color: #fff;
-display: inline-block;
-margin: 0 -10px;
-padding: 2px 10px 0 11px;
-width: 100%;
+/* Shows highlighted menu item... only on vilters for now... */
+.reflow .active_item a,
+.reflow .active_item a.ui-state-hover {
+background-color: #b9c4d8 !important;
+background-image: -webkit-gradient(linear, left top, left bottom, from(#b9c4d8), to(#9aa9c8)) !important;
+background-image: -webkit-linear-gradient(top, #b9c4d8, #9aa9c8) !important;
+background-image: -moz-linear-gradient(top, #b9c4d8, #9aa9c8) !important;
+background-image: -o-linear-gradient(top, #b9c4d8, #9aa9c8) !important;
+background-image: -ms-linear-gradient(top, #b9c4d8, #9aa9c8) !important;
+background-image: linear-gradient(top, #b9c4d8, #9aa9c8) !important;
+border: 0 !important;
+border-bottom: 1px solid #919fbc !important;
+color: #fff !important;
+display: inline-block !important;
+margin: 0 -10px !important;
+padding: 2px 10px 0 11px !important;
+width: 100% !important;
+}
+
+#app_menu #flow_views {
+  margin-top: -15px;
 }
 
 #app_menu div.app_icon {
@@ -226,17 +231,17 @@ width: 100%;
 
 .reflow #influx_icon,
 .reflow #app_menu div#influx_icon.app_icon.current {
-  background: url(http://dl.dropbox.com/u/138203/reflow/img/inbox.png) 0 50% no-repeat !important;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAYAAAAmL5yKAAAACXBIWXMAAAsTAAALEwEAmpwYAAABL0lEQVQoFaWSvy4EURSHr42VWCR6irGPQCJZ8RYahUS8gd5DaLagkmyil9Bq9BK2VSAKHQkiUXB93+y5Mg2R7Em+Of9+58y9s5tyzqmQUhrAA5zAHNwGxtbsDYpe3xyuaL4A1XQJDt0HxtbsqanKkhZJsQ0ChZuwDV9QzNiaPTVqR1YfI6U22TUMy2Zil98FrUZ9SO0K2vVsLOhR8Hh7YHwcvOGl5PbUqO01F/SjuILvwGnkCgtn0VuOWj9enuYpPIJXqI+Kn4ELKMPGszHg1dQ642zaAYWHUMESLAQ3eDFfBHsVqHVmC9J5JO/41+AJvwrdYB3/DKWv1gVHkzwmQJseuZ/nPtEB2N+F+rj4pmUX/GZrNORP84OMZeMumPIK/k0//3GMDzT+dOWb+fL8DVE4i6oeywk6AAAAAElFTkSuQmCC) 0 50% no-repeat !important;
 }
 
 .reflow #flowser_icon,
 .reflow #app_menu div#flowser_icon.app_icon.current {
-  background: url(http://dl.dropbox.com/u/138203/reflow/img/search.png) 0 50% no-repeat !important;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAABW0lEQVQ4EZWSPS8EURSG7yyxBIkoNBq1QmIrH4lCQaneDZVoFSgUeoVqo/QDRCLxG4hKJVGIRKiIgoLCV8J6zuS8k0MmxE2evOeej3fuzJ2s1WolrSzL2oknYQIG4ASO6LlBy5cZuEmNjkMwx8gd+1WoqDeqhkdpsEYNvhE/hb3lN+OgYvKpA47Bmj6gCSMwBHW4AtWmNSillqa8wZqaKkjJ2as9es+u8lLyad2Lr+iwClHJH3jPOVqNtQqJfrD1DvbeZevBk1XUbqpYZnDqux50vKh4wNV2Eo759hZ98biQQaJ7sG9wCTUdkbgbtsFqxrJqUl3jWmiyD7YPO3AW8nZDixqUyqCN4hZ8hgE9Neoz9YaGTXMDJSjOwh5cwDXY/7ECS2C3ZGb2DQqTbwbBqIumXu3zJ6U0Ty6a1PN8bPorxuCnyUzpCX4zwmQhnGTj3wb5sVOaw8Sut+8L7m2AIiemBQIAAAAASUVORK5CYII=) 0 50% no-repeat !important;
 }
 
 .reflow #settings_icon,
 .reflow #app_menu div#settings_icon.app_icon.current {
-  background: url(http://dl.dropbox.com/u/138203/reflow/img/settings.png) 0 50% no-repeat !important;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAABQ0lEQVQ4EY2TsUoDQRCGd23tJSGll/gYio1lnkDOQskzWUgKG0FJL5jkFcTWJho7O1HBQs/vX3aW4Tg0C1/mv5l/ZjfJXmyaJnStGOOQ/CTXzvE9dvmCBhgYKujloXO0pot5zvXQlflTzh4onMEbrOAYXsAGrHNuRZTntPSlKSGMSH6BNfwX5R2qdwuh9QGvSW32Ie9nspajhHBCwu98zfM4M2vVatcXdinewZMzXaGjM+mkN64ur3rUGx7A7yx9aM0WyR11+O41OUJ7fbcTPHfl0m+oC7OAZ7CTTG1ni9QuXV1e9VT+EtXO8IO+gH04gCnYcMW6DJZgDWAN3vSXlneg3vQdeNiGHdh0yasetszvAlIvzjvoL6rBX2Vp5VSTZ1L6TCiy9IP2s16ilRSLnOuj0xW2vnICS1jEuAe3mZHl2/EXjkIb+FXLWogAAAAASUVORK5CYII=) 0 50% no-repeat !important;
 }
 
 .reflow #app_menu div.app_icon img,
@@ -245,7 +250,7 @@ width: 100%;
 }
 
 .reflow #flow_list .flow_name {
-  background: url(http://dl.dropbox.com/u/138203/reflow/img/chat.png) 0 50% no-repeat;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAHCAYAAAABIM1CAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAyklEQVQYGXXQzwoBURTH8XMlbFh6ASuNhIWUbJS8hCzY8BxWNvIGLLyJHY2NPITSlIXyJ43vme4VGrc+nXvO/c2dQcIwlDgiUsEKS3hxGZ29HyaUQwHZ6EBkxp5EZGJnXxmdJQi4NWSjb9T6b4040EzfBT4v8Bg2ULKHW+odV/h2VqZqpmh7SerGGJOhnHCET9+l1uFWk9mFZoMOAvo0P+FmaNoYoIUFaqgijxR06Zfo5Tvs0cMac8gBevsDY5zh/rzfGtjMk6rPTF+kjWH086j5DwAAAABJRU5ErkJggg==) 0 50% no-repeat;
   padding-left: 21px;
 }
 
@@ -284,21 +289,16 @@ width: 100%;
 }
 
 .reflow #actions [title="Settings"] {
-  background: url(http://dl.dropbox.com/u/138203/reflow/img/settings.png) no-repeat !important;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAABQ0lEQVQ4EY2TsUoDQRCGd23tJSGll/gYio1lnkDOQskzWUgKG0FJL5jkFcTWJho7O1HBQs/vX3aW4Tg0C1/mv5l/ZjfJXmyaJnStGOOQ/CTXzvE9dvmCBhgYKujloXO0pot5zvXQlflTzh4onMEbrOAYXsAGrHNuRZTntPSlKSGMSH6BNfwX5R2qdwuh9QGvSW32Ie9nspajhHBCwu98zfM4M2vVatcXdinewZMzXaGjM+mkN64ur3rUGx7A7yx9aM0WyR11+O41OUJ7fbcTPHfl0m+oC7OAZ7CTTG1ni9QuXV1e9VT+EtXO8IO+gH04gCnYcMW6DJZgDWAN3vSXlneg3vQdeNiGHdh0yasetszvAlIvzjvoL6rBX2Vp5VSTZ1L6TCiy9IP2s16ilRSLnOuj0xW2vnICS1jEuAe3mZHl2/EXjkIb+FXLWogAAAAASUVORK5CYII=) no-repeat !important;
 }
 
 .reflow #actions [title="Help"] {
-  background: url(http://dl.dropbox.com/u/138203/reflow/img/help.png) no-repeat !important;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAABWklEQVQ4EXWSvUpDQRCFc8XWJ5BcbvzBJnYhpvYZLH0AQSwsBEHQlxAhEKKgT2BlbSGaUrDzJ7YW4k8t1+9sdi6b4WbgZHbOOTO72btZWZYNH1mWLcFtREh+EPC+qpgKDTAg5GAAvoAmpxAnLTe/ctrcQXxxTekAW8vTsSFhAEQT6Hhm+mA9BLtgD1wD05TlbVYnoNDRUsOh7WAZ/dJ5BmEAZAF+nPhIfQJG4CAat5xHPcU8Pz2wANJYpxAUZ5PUWIzZknp6c/y0jXH5j3qH3S/4rAVr3YePtgbMihHNfZqXMdyA1TqjBjzVCXCf8UHts16b4Qm9LcRfkH4Frd/BMbir0aSrp2XvQN/cDziKt69L9prqYdCjKYcYO+Mt9SY4dbyaxyA86fQpdyHfQN1uKSdPVxtXJ6iKyaM6x/BdM0ictML8ylmYApsGt79Crf++Hfkr8j3e51hX6R+KY+rHG87+JgAAAABJRU5ErkJggg==) no-repeat !important;
   display: inline-block;
   height: 16px;
   overflow: hidden;
   text-indent: -5000px;
   width: 16px;
-}
-
-.reflow #actions .ui-state-active {
-  border: 0 !important;
-  padding: 0 !important;
 }
 
 /* People */
@@ -365,7 +365,7 @@ width: 100%;
 
 /* The Flow */
 
-.reflow .app-toolbar {
+.reflow #flowdock-influx .app-toolbar {
   display: none !important;
 }
 
@@ -387,9 +387,11 @@ width: 100%;
   font-size: 100%;
 }
 
-
-
 /* The Chat */
+
+.reflow #flowdock-chat .app-toolbar {
+  display: none !important;
+}
 
 .reflow #flowdock-chat #chat_app_input_area {
   bottom: -1px;
@@ -398,18 +400,17 @@ width: 100%;
   width: 50%;
 }
 
-/* Misc */
+/* jQuery UI resets */
 
-.reflow .ui-state-hover {
-  border: 0 !important;
+.reflow .ui-state-hover,
+.reflow .ui-widget-content .ui-state-hover,
+.reflow .ui-state-focus,
+.reflow .ui-widget-content .ui-state-focus {
+  background: inherit !important;
+  border: inherit !important;
+  border-radius: none;
 }
 
-/* Temp */
-
-/*#app_list {
-  display: none;
-}
-*/
 .feedback {
   display: none;
 }

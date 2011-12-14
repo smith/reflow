@@ -62,8 +62,7 @@ $(document).ready(function(){
         if (!viewsMoved && viewsList.length ===1) {
             viewsList.prepend('<section id="flow_views"><h4>Views</h4><ol></ol></section>');
             $('.app_icon').each(function() {
-                $(this).appendTo($('#flow_views ol'));
-                $(this).wrap('<li>');
+                $(this).appendTo($('#flow_views ol')).wrap('<li>');
             });
             viewsMoved = true;
             $('#flow_views .current')
@@ -73,11 +72,10 @@ $(document).ready(function(){
 
         // Move the settings, people & help icon
         if(!settingsMoved && actions.length === 1) {
-            actions.attr('id', 'actions').appendTo($('#app_menu'));
+            actions.attr('id', 'actions').appendTo(viewsList);
             $('#actions a').removeClass('ui-corner-all ui-state-default app-button app-button-icon app-button-bevel app-button-toggleable app-button-icon-solo');
             settingsMoved = true;
-            $('#actions span').remove();
-            $('#flowdock-influx .app-toolbar').remove();
+            $('#actions span, #flowdock-influx .app-toolbar').remove();
         }
 
         // Move the users
@@ -85,46 +83,36 @@ $(document).ready(function(){
             usersClick.click();
             usersList = $("#dashboard_user_list");
             if (usersList.length === 1) {
-
                 $('#main_splitter').prepend('<section id="people"></section>');
-
                 // Append me
                 $('header').append('<div class="user"><div class="me" style="' + $('#status-panel .avatar').attr('style') + '"></div><div class="user_name">' + $('.user_info').find('.name').text() + '</div></div>');
-
                 // Append everyone else
                 $('#dashboard_user_list .user').each(function() {
                     var t = $(this);
                     $('#people').append('<div id="' + t.attr('id').replace('dashboard_', '') + '" class="' + t.attr('class') + '"><div class="user_name">' + t.find('.user_name').text() + '</div><div class="last_activity">' + t.find('.last_activity').text() + '</div></div>');
                 });
-
                 // Append people manager
                 $('.people-manager')
                     .removeClass('app-button ui-corner-all ui-state-default ui-state-hover')
                     .find('.ui-icon')
                     .remove()
                 $('#people').append($('.people-manager'));
-
                 usersClick.click();
                 usersListMoved = true;
             }
         }
 
         if (prepStuff && filtersMoved && flowListMoved && viewsMoved && settingsMoved && usersListMoved) {
-
             clearInterval(interval);
-
-
-
             // Show selected menu items
             $('#app_menu ol').children().click(function() {
-               $(this).closest('ol').children().removeClass('active_item');
-               $(this).closest('li').addClass('active_item')
+                var t = $(this);
+               t.closest('ol').children().removeClass('active_item');
+               t.closest('li').addClass('active_item')
             });
-
         }
 
         return false;
-
     }
 
     interval = window.setInterval(moveTheDOM, 1000);

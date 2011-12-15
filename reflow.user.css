@@ -412,7 +412,7 @@ width: 100% !important;
   position: absolute;
   top: 14px;
   width: 0;
-  content: '';
+  content: "";
 }
 
 /* Reusable styles */

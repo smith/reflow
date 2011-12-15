@@ -6,12 +6,8 @@
 }
 
 .reflow header {
-  background-color: #e8e8e8;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#e8e8e8), to(#c0c0c0));
   background-image: -webkit-linear-gradient(top, #e8e8e8, #c0c0c0);
-  background-image: -moz-linear-gradient(top, #e8e8e8, #c0c0c0);
-  background-image: -o-linear-gradient(top, #e8e8e8, #c0c0c0);
-  background-image: -ms-linear-gradient(top, #e8e8e8, #c0c0c0);
   background-image: linear-gradient(top, #e8e8e8, #c0c0c0);
   border-bottom: 1px solid #989898;
   height: 50px;
@@ -20,11 +16,7 @@
 .reflow #app_menu {
   background: #e0e5eb;
   border-top: 1px solid #f9f9f9;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   box-shadow: none;
   float: left;
   min-height: 100%;
@@ -42,8 +34,6 @@
 .reflow #main_splitter {
   border-left: 1px solid #b4b4b4;
   border-top: 1px solid #f9f9f9;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   float: right;
   margin: 0;
@@ -53,8 +43,6 @@
 
 .reflow #app {
   background: #efefef;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   float: right;
   position: static !important;
@@ -64,11 +52,7 @@
 
 .reflow #chat {
   border-left: 0;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   box-shadow: none;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   float: left;
   position: static !important;
@@ -84,18 +68,6 @@
 .reflow header .user {
   float: left;
   margin: 10px 0 0 10px;
-}
-
-.reflow header .user .me {
-  border: 1px solid #fff;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  border-radius: 100%;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .25);
-  display: inline-block;
-  height: 30px;
-  margin-right: 5px;
-  width: 30px;
 }
 
 .reflow header .user .user_name {
@@ -118,16 +90,10 @@
 
 .reflow .common-flow-items a,
 .reflow .common-flow-items input {
-  background-color: #f3f3f3;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#f3f3f3), to(#dfdfdf));
   background-image: -webkit-linear-gradient(top, #f3f3f3, #dfdfdf);
-  background-image: -moz-linear-gradient(top, #f3f3f3, #dfdfdf);
-  background-image: -o-linear-gradient(top, #f3f3f3, #dfdfdf);
-  background-image: -ms-linear-gradient(top, #f3f3f3, #dfdfdf);
   background-image: linear-gradient(top, #f3f3f3, #dfdfdf);
   border: 1px solid #ccc;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
   border-radius: 5px;
   color: #444;
   cursor: pointer;
@@ -138,7 +104,6 @@
   text-decoration: none;
   top: 5px;
   -webkit-transition: opacity .2s linear;
-  -moz-transition: opacity .2s linear;
   transition: opacity .2s linear;
 }
 
@@ -190,12 +155,8 @@
 /* Shows highlighted menu item... only on vilters for now... */
 .reflow .active_item a,
 .reflow .active_item a.ui-state-hover {
-background-color: #b9c4d8 !important;
 background-image: -webkit-gradient(linear, left top, left bottom, from(#b9c4d8), to(#9aa9c8)) !important;
 background-image: -webkit-linear-gradient(top, #b9c4d8, #9aa9c8) !important;
-background-image: -moz-linear-gradient(top, #b9c4d8, #9aa9c8) !important;
-background-image: -o-linear-gradient(top, #b9c4d8, #9aa9c8) !important;
-background-image: -ms-linear-gradient(top, #b9c4d8, #9aa9c8) !important;
 background-image: linear-gradient(top, #b9c4d8, #9aa9c8) !important;
 border: 0 !important;
 border-bottom: 1px solid #919fbc !important;
@@ -223,8 +184,6 @@ width: 100% !important;
   padding: 0;
   line-height: inherit;
   height: auto;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
   display: inline-block;
 }
@@ -279,7 +238,6 @@ width: 100% !important;
   overflow: hidden;
   text-indent: -5000px;
   -webkit-transition: opacity .2s linear;
-  -moz-transition: opacity .2s linear;
   transition: opacity .2s linear;
   width: 16px !important;
 }
@@ -306,8 +264,6 @@ width: 100% !important;
 .reflow #people {
   background: #e6e6e6;
   border-bottom: 1px solid #b4b4b4;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 10px;
 }
@@ -318,18 +274,12 @@ width: 100% !important;
 }
 
 .reflow #people .user .user_name {
-  background-color: #dae6f9 !important;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#dae6f9), to(#c1d4f5)) !important;
   background-image: -webkit-linear-gradient(top, #dae6f9, #c1d4f5) !important;
-  background-image: -moz-linear-gradient(top, #dae6f9, #c1d4f5) !important;
-  background-image: -o-linear-gradient(top, #dae6f9, #c1d4f5) !important;
-  background-image: -ms-linear-gradient(top, #dae6f9, #c1d4f5) !important;
   background-image: linear-gradient(top, #dae6f9, #c1d4f5) !important;
   border: 1px solid #9cbdee;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
   border-radius: 20px;
-  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5) inset;
+  box-shadow: 0 0 1px rgba(255, 255, 255, .5) inset;
   display: inline-block;
   font-size: 11px;
   line-height: 20px;
@@ -338,12 +288,8 @@ width: 100% !important;
 }
 
 .reflow #people .user.idle .user_name {
-  background-color: #efd57e !important;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#efd57e), to(#ffc100)) !important;
   background-image: -webkit-linear-gradient(top, #efd57e, #ffc100) !important;
-  background-image: -moz-linear-gradient(top, #efd57e, #ffc100) !important;
-  background-image: -o-linear-gradient(top, #efd57e, #ffc100) !important;
-  background-image: -ms-linear-gradient(top, #efd57e, #ffc100) !important;
   background-image: linear-gradient(top, #efd57e, #ffc100) !important;
   border: 1px solid #daa400;
   opacity: .5;
@@ -393,6 +339,10 @@ width: 100% !important;
   display: none !important;
 }
 
+.reflow #flowdock-chat #chat_app {
+  background: #efefef;
+}
+
 .reflow #flowdock-chat #chat_app_input_area {
   bottom: -1px;
   left: 0;
@@ -405,11 +355,9 @@ width: 100% !important;
 .reflow #flowdock-chat #chat_app_lines .chat_app_history_info,
 .reflow #flowdock-chat #chat_app_lines .chat_line {
   border: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   float: none;
-  padding: 5px 10px 5px 100px;
+  padding: 5px 10px 5px 60px;
 }
 
 .reflow #flowdock-chat .chat_line.chat_topline, #flowdock-chat .chat_line.separator {
@@ -423,20 +371,21 @@ width: 100% !important;
   position: absolute;
   text-align: center;
   top: 7px;
-  width: 80px;
+  width: 40px;
 }
 
 .reflow #flowdock-chat .chat_line .chat_line_header .user_avatar {
   background: transparent no-repeat;
-  width: 30px;
-  height: 30px;
-  display: inline-block;
   border-radius: 30px;
   border: 1px solid white;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
+  display: inline-block;
+  height: 30px;
+  width: 30px;
 }
 
 .reflow #flowdock-chat .chat_line .nick {
+  display: none;
   position: static;
   width: auto;
 }
@@ -446,28 +395,14 @@ width: 100% !important;
 }
 
 .reflow #flowdock-chat .chat_line .chat_line_content {
-  border: 1px solid #ccc;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
   padding: 11px 15px;
   position: relative;
 }
 
 .reflow #flowdock-chat .chat_line .chat_line_content:before {
-  border-right: 6px solid #ccc;
-  border-top: 6px solid transparent;
-  border-bottom: 6px solid transparent;
-  display: inline-block;
-  height: 0;
-  left: -6px;
-  position: absolute;
-  top: 10px;
-  width: 0;
-  content: '';
-}
-
-.reflow #flowdock-chat .chat_line .chat_line_content:after {
   border-right: 5px solid #fff;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
@@ -475,10 +410,23 @@ width: 100% !important;
   height: 0;
   left: -5px;
   position: absolute;
-  top: 11px;
+  top: 14px;
   width: 0;
   content: '';
-  visibility: visible;
+}
+
+/* Reusable styles */
+
+.reflow .user_avatar {
+  border: 1px solid #fff;
+  border-radius: 100%;
+  box-shadow:
+    0 1px 1px rgba(0, 0, 0, .35),
+    0 1px 3px rgba(0, 0, 0, .75) inset;
+  display: inline-block;
+  height: 30px;
+  margin-right: 5px;
+  width: 30px;
 }
 
 /* jQuery UI resets */

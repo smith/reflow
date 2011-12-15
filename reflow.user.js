@@ -93,7 +93,7 @@ $(document).ready(function(){
             if (usersList.length === 1) {
                 $('#main_splitter').prepend('<section id="people"></section>');
                 // Append me
-                $('header').append('<div class="user"><div class="me" style="' + $('#status-panel .avatar').attr('style') + '"></div><div class="user_name">' + $('.user_info').find('.name').text() + '</div></div>');
+                $('header').append('<div class="user"><div class="user_avatar" style="' + $('#status-panel .avatar').attr('style') + '"></div><div class="user_name">' + $('.user_info').find('.name').text() + '</div></div>');
                 // Append everyone else
                 $('#dashboard_user_list .user').each(function() {
                     var t = $(this);
@@ -157,20 +157,22 @@ $(document).ready(function(){
 
 
     // Set avatars for chat messages
-    // var ava, userClass;
+    var userClass;
 
-    // function loadAvatars() {
-    //     if ($('#chat_app_lines').children().length > 0) {
-    //         $('#chat_app_lines').bind('DOMNodeInserted', function() {
-    //             $('#chat_app_lines').find('.chat_line_header').each(function() {
-    //                 userClass = $(this).find('.nick').attr('class').split(' ')[1];
-    //                 $(this).prepend('<span class="user_avatar" style="background-image:' + userAvatars[userClass] + ';"></span>');
-    //             });
-    //             return false;
-    //         });
-    //         clearInterval(ava);
-    //     }
-    // }
-    // ava = window.setInterval(loadAvatars, 1000);
+    function setUserAvatars() {
+        if ($('#chat_app_lines').length > 0) {
+            $('#chat_app_lines').children().not('.separator, .reflowed').each(function() {
+                userClass = $(this).find('.nick').attr('class').split(' ')[1];
+                // for now don't try to show current users avatar (it's undefined)
+                if (typeof userAvatars[userClass] != 'undefined') {
+                   $(this)
+                          .addClass('reflowed')
+                          .find('.chat_line_header')
+                          .prepend('<span class="user_avatar" style="background-image:' + userAvatars[userClass] + ';"></span>');
+                }
+            });
+        }
+    }
+    var doAvatars = window.setInterval(setUserAvatars, 1000)
 
 });

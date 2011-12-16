@@ -16,19 +16,6 @@ h3. Installation
 
 !http://dl.dropbox.com/u/138203/Screenshots/dy.png!
 
-h3. Some Issues
-
-* The "Personal settings" link is currently not available - there's some weird AJAXy stuff I need to get ironed out for that
-* Flowdock resizes the "flow" and "chat" windows every few seconds using JavaScript and the way the HTML is laid out - I haven't figured out a way to override this using CSS. Therefore I'm overriding the Flowdock script by firing my own script every few seconds (on window resize to be exact - even though it doesn't really resize, but whatev). Unfortunately this can create a weird visual bug every couple of seconds when typing into the chat textarea - however it seems harmless for now
-* I haven't fully ironed out toggling the active states for "Views" and "Flows" in the side menu.
-* Just a note that I'm hiding the "Feedback" tab in the last line of CSS. You can comment it out or delete it
-
-h3. Upcoming Enhancements
-
-* Show how long a user has been ide when hovering over their name
-* Better styles for the actual "flow" and "chat" windows
-* Change military time to non-military time (in the chat area)
-
 h3. Feedback
 
 Please create an "issue":https://github.com/starzonmyarmz/reflow/issues if you find any bugs or have any feature enhancements. Or better yet - fork this and send a pull request so that I don't have to do all the work myself!
